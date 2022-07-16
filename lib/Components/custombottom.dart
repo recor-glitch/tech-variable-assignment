@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techdemo/Components/custom_icons.dart';
 import 'package:techdemo/constants.dart';
 
 class CustomBottom extends StatelessWidget {
@@ -9,11 +10,13 @@ class CustomBottom extends StatelessWidget {
   Widget build(BuildContext context) {
     return TabBar(
       controller: controller,
-      labelColor: iconColor, tabs: [
-      Tab(icon: Icon(Icons.credit_card)),
-      Tab(icon: Icon(Icons.sms)),
-      Tab(icon: Icon(Icons.graphic_eq_rounded)),
-      Tab(icon: Icon(Icons.menu))
+      labelColor: selectediconcolor,
+      unselectedLabelColor: iconColor,
+      tabs: [
+      Tab(icon: Icon(Icons.credit_card, size: 30)),
+      Tab(icon: Icon(Custom_icons.message, size: 20)),
+      Tab(icon: Icon(Custom_icons.chart)),
+      Tab(icon: Icon(Icons.more_horiz_rounded, size: 30))
     ]);
   }
 }

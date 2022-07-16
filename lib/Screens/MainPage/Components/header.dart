@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:techdemo/constants.dart';
 
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
@@ -14,19 +15,21 @@ class Header extends StatelessWidget {
       decoration: BoxDecoration(
         color: colour,
         borderRadius: BorderRadius.circular(10)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-        Text(head, style: GoogleFonts.rubik(fontSize: 14)),
-        Row(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20),
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(amt, style: GoogleFonts.rubik(fontSize: 16, fontWeight: FontWeight.bold)),
-            Icon(Icons.upcoming_rounded)
-          ],
-        )
-      ]),
+          Text(head, style: GoogleFonts.rubik(fontSize: 14)),
+          Row(
+            children: [
+              Text(amt, style: GoogleFonts.rubik(fontSize: 16, fontWeight: FontWeight.bold)),
+              Icon(Icons.trending_up, color: iconColor)
+            ],
+          )
+        ]),
+      ),
     );
     }
 
